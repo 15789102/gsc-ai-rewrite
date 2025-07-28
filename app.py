@@ -129,6 +129,7 @@ def fetch_title_and_meta(url):
 
 
 with st.sidebar:
+    st.image("gsc-img.png", width=360)  # 可調整 width
     st.markdown("🔐 **OpenAI Key Setting**")
     openai_api_key = st.text_input("Paste your OpenAI API key", type="password", key="openai_key_input")
     if openai_api_key:
@@ -188,7 +189,8 @@ with st.sidebar.expander("📘 Project Background: Why This Tool?"):
 
 # 預設頁面設定
 st.set_page_config(page_title="SEO Meta Rewrite Tool", layout="wide")
-st.title("🔍 Google Search Console AI Rewrite Assistant")
+st.title("Google Search Console AI Rewrite Assistant")
+st.text("© by **Ben Chen**, 2025")
 
 # Step 1: 上傳檔案
 #st.header("Step 1:Upload Your File（CSV）")
@@ -222,7 +224,7 @@ with st.expander("⚙️ Basic Settings - Parameters Setting"):
     "Professional & Focused": "Use a professional and informative tone. Be concise, accurate, and emphasize value.",
     "Friendly & Trustworthy": "Use a warm and approachable tone. Write like you’re helping a friend make a good decision.",
     "Inspiring & Motivational": "Use a bold and inspiring tone. Spark curiosity and confidence in the reader.",
-    "Conversationa）": "Use a natural, casual tone like a real human talking. Make it relatable and easy to read.",
+    "Conversationa": "Use a natural, casual tone like a real human talking. Make it relatable and easy to read.",
     "Persuasive & Energetic": "Use a persuasive and energetic tone. Create urgency and excitement to encourage clicks."
 }
     tone_choice = st.selectbox("✍️ AI Tone of Voice", list(tone_options.keys()))
